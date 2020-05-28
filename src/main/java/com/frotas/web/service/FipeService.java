@@ -9,4 +9,5 @@ public interface FipeService {
 	void delete(Long id);
 	Fipe findById(Long id);
 	List<Fipe> findAll();
+	Boolean fipeTemVeiculo(Long id);
 }

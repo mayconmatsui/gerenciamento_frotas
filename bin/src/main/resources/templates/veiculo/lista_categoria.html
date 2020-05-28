@@ -24,7 +24,6 @@
         </nav>
 
         <div class="container" id="listagem">
-        <div th:replace="fragments/alert"></div>
             <div class="table-responsive">
                 <table class="table table-striped table-hover table-sm">
                     <thead>
@@ -43,7 +42,7 @@
                                     <span class="oi oi-brush" title="Editar" aria-hidden="true"></span>
                                 </a>
                                 <button th:id="${'btn_veiculo/excluir/'+categoria.id}" type="button"
-                                    class="btn btn-danger btn-sm" data-toggle="modal" data-target="#myModal">
+                                    class="btn btn-danger btn-sm" data-togle="modal" data-target="#myModal">
                                     <span class="oi oi-circle-x" title="Exclusão desabilitada"
                                         aria-hidden="true"></span>
                                 </button>

@@ -15,7 +15,6 @@ public class FipeServiceImpl implements FipeService {
 	@Override
 	public void save(Fipe fipe) {
 		dao.save(fipe);
-		
 	}
 
 	@Override
@@ -38,6 +37,14 @@ public class FipeServiceImpl implements FipeService {
 	@Override @Transactional(readOnly = true)
 	public List<Fipe> findAll() {
 		return dao.findAll();
+	}
+
+	@Override
+	public Boolean fipeTemVeiculo(Long id) {
+		if(findById(id).getVeiculos().isEmpty()){
+			return false;
+		}
+		return true;
 	}
 
 }
